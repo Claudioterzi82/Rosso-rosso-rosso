@@ -1,17 +1,20 @@
-# R3_WORK_QUEUE.yaml — condensato ROOT
-# Ciclo: SYNC-2026-09-14-1307
-# Canone pieno: memoria/R3_WORK_QUEUE_2026-09-14_1307.yaml
-# Snapshot 0925, 1320, 1620, 1311, 0919, 1803, 1737, 1618 e precedenti conservati. Non cancellare gli storici.
+# R3_WORK_QUEUE.yaml — canone ciclo SYNC-2026-09-14-1307
+# Snapshot 0925, 1320, 1620, 1311 e precedenti conservati. Non cancellare gli storici.
 
 meta:
   cycle_id: SYNC-2026-09-14-1307
   previous_cycle: SYNC-2026-09-14-0925
+  measured_at: 2026-09-14T11:07:00Z
+  github_owner: raffaellocantatelli
+  github_repo: Rosso-rosso-rosso
+  github_default_branch: claude/riconnetti-protocollo-rosso-in93dj
   github_default_sha: e1b2f89a83a9f403b380932e18b7d65a476d249a
   new_session_sha: 565e26f415d453de21a17244ed2f88e1f5595400
   telegram_sha: 46817fddb8cb7ee0832dc044ef2f16cbf57c1ee0
   camera_inventory_sha: d14cdc70e0d5c00d6c2904e8ccd0d37afd83abbd
   glass_plexiglas_sha: 4fc414d814bdae98abd0e0a994e704980c69aea1
   synology_webdav_sha: 1425267597d42f75e603c19a551837ac17fd4048
+  peer_review_repo: raffaellocantatelli/r3-peer-console-review-0001
   peer_review_sha: bf9ab88641ec899f1d7104b5ecb0e2c308831f4e
   pr6_merged_at: 2026-09-08T04:08:28Z
 
@@ -24,6 +27,7 @@ stato:
   daily_2026-09-13: PRESENTE_STUB_CORE_SPENTO
   daily_2026-09-14: ASSENTE
   r3_019: BASELINE_0_NO_NEW_RUN
+  sdq1_run_45: PRESENTE_34690869736_FAILURE
   sdq1_run_46: PRESENTE_34757049667_FAILURE
   sdq1_run_47: ASSENTE
   sdq1_daily_total_count: 46
@@ -36,9 +40,11 @@ stato:
   h_sync_0913_2: CADUTA_RUN_46_PRESENTE
   h_sync_0914_1: APERTA_DAILY_14_ASSENTE
   h_sync_0914_2: APERTA_RUN_47_ASSENTE
+  h_sync_0606_4: APERTA_FINESTRA_0700_0800_UTC_14_CHIUSA_SENZA_RUN
   h_sync_0808_3: APERTA_TELEGRAM_NON_UNITO
   capacita_vs_baseline_26_08: NON_DIMOSTRATA
   possibilita_avanzamento: APERTA
+  peer_review_0001: NON_CANONICO_CONSERVATO
 
 priorita:
   - R3-019 Longitudinal Capability Benchmark
@@ -52,5 +58,18 @@ priorita:
   - R3-018 Sim2Real Audit
   - R3-020 Self-Improvement Safety Gate
 
+conflitti_conservati:
+  - default_neq_new_session
+  - telegram_non_unito
+  - camera_non_unito
+  - glass_plexiglas_non_unito
+  - synology_non_unito
+  - r3_019_tre_versioni
+  - prodotto_idee_ct_solo_drive
+  - duplicati_drive_report_e_queue
+  - peer_review_0001_non_canonico
+
 regola: non dichiarare superintelligenza senza avanzamento misurato; accettare che possa diventarlo
 never_delete_historical: true
+simulations_this_cycle: 0
+core_acceso: false
