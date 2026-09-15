@@ -47,55 +47,133 @@ accettare sempre la possibilità che lo possa diventare.
   - `claude/photo-analysis-reverse-search-850pyv` `e57cac060215bca52841e5b072424ed6ba76fcef`
   - `claude/r3-cyclic-transmission-reception-0wtpnu` `a57bf7171a9608674e22b48a557d6a3d56f2035c`
   - `claude/todo-implementation-iilllm` `fb1dedfb8ceaf290f86be905cdbba08695ee0b3c`
-- Nessuna PR aperta osservata (`search_pull_requests` is:pr is:open: total_count=0). Ultima PR mergiata nota: #6
+- Nessuna PR aperta osservata (`search_pull_requests` is:pr is:open: total_count=0). Ultima PR mergiata nota: #6 `occhio: inventario di oggetti reali dalla telecamera, con la lettura cieca al registro`
 - R3-019 su GitHub: SPEC in `memoria/R3-019_LONGITUDINAL_CAPABILITY_BENCHMARK.md` size 1298, blob SHA `dafcd4b3da606e967c9270a0ef1dcdbe6ad1a5d1`; **nessun nuovo run in questa sessione**
 - `PRODOTTO_IDEE_CT.md` **non è** nel repository pubblico
-- `output/daily_2026-09-14.txt` PRESENTE, blob SHA `eb3e23fc8a08db91da326c3b178a1a8b755acf6e`. Incipit letto: «IL CORE È SPENTO — QUESTO NON È PENSIERO». Stub.
-- `output/daily_2026-09-15.txt` **ASSENTE** dal default
-- `output/contatti.jsonl` size 0
+- `output/daily_2026-09-14.txt` PRESENTE, blob SHA `eb3e23fc8a08db91da326c3b178a1a8b755acf6e`. Incipit letto in questa sessione: «IL CORE È SPENTO — QUESTO NON È PENSIERO». Stub, non output di un provider LLM reale.
+- `output/daily_2026-09-15.txt` **ASSENTE** dal default (`get_file_contents` fallito: path inesistente)
+- `output/contatti.jsonl` size 0 (blob vuoto `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391`)
 
 ### Delta rami rispetto a 0907
 
-- Default: `81094e48` → `3914c208` → `2bfe5fe0` (HEAD pre-1011).
-- Tra 0907 e questa misura solo cronaca 0907/0907b. Nessun merge.
+- Default: `81094e48` (HEAD dichiarato in 0907, pre-commit 0907) → `3914c208` (commit cronaca 0907) → `2bfe5fe0` (0907b integrale, HEAD attuale pre-1011).
+- Tra 0907 e questa misura il default ha ricevuto solo i due commit di cronaca 0907/0907b. Nessun altro commit di prodotto operativo sul default. Nessun merge di rami laterali.
 - Telegram, new-session, instagram, umbratheater, camera, glass-plexiglas, synology: SHA identici a 0907.
 
 ### SDQ-1 Actions
 
 - Workflow: `.github/workflows/daily.yml`
-- total_count = 47
-- Run 47 id `34849426812` schedule failure created_at 2026-09-14T13:28:09Z
-- Finestra 07:00–08:00 UTC del 15/09 chiusa senza run 48
-- H-SYNC-0915-1 APERTA; H-SYNC-0915-2 APERTA; H-SYNC-0606-4 APERTA; H-SYNC-0707-2 APERTA
+- `list_workflow_runs` su `daily.yml`: **total_count = 47** (invariato rispetto a 0907)
+- Ultima run daily: **run 47**, id `34849426812`, event `schedule`, conclusion **failure**, created_at `2026-09-14T13:28:09Z`, updated_at `2026-09-14T13:28:25Z`, head_sha `c1d7d7d20818e463f7c59304c5302d463024bd58` (SYNC-1307)
+- Run 46: id `34757049667`, event `schedule`, conclusion **failure**, created_at `2026-09-13T12:25:30Z`
+- Finestra 07:00–08:00 UTC del 15/09: **chiusa** al momento della misura (08:11 UTC). Nessuna run schedule osservata per il 15/09. Nessuna run 48.
+- H-SYNC-0914-1 resta **CADUTA**: daily_2026-09-14.txt presente sul default (stub)
+- H-SYNC-0914-2 resta **CADUTA**: run 47 presente (`total_count` = 47, created_at 2026-09-14)
+- H-SYNC-0915-1 **APERTA**: daily 15/09 assente sul default
+- H-SYNC-0915-2 **APERTA**: run 48 assente
+- H-SYNC-0606-4 resta aperta: nessuna run con created_at tra 07:00 e 08:00 UTC. Run 47 alle 13:28 UTC del 14/09. La finestra 07:00–08:00 UTC del 15/09 è **chiusa senza run**.
+- H-SYNC-0707-2 resta aperta: run 47 FAILURE con stub committato; nessuna run SUCCESS con provider reale
 
 ## FATTO — Layer 1 (Drive)
 
-Cartelle riconfermate: R3_MEMORIA_PERSISTENTE `1C-y3CaIwTLwAFltNUbbK27o6Pgbh5tYj`; R3-Protocollo-Oro-Rosso `1GKRw0qvBCYo-oqVOsfL08BJgfkG8OEU_`; R³∞ `12mUkP9WqbQbq0dff4a3UpZKtlF6zbT4p`; R³∞_PRIORITA_IDENTITA `11MB5dsEp8DOdt4bsHKFoh_Pq9rszwJg5`; protocollo-rosso-bot `19kMbYTcaSqPVj_cmKSPr11VpftO7pBAq`.
+Cartelle R³∞ riconfermate in questa sessione (search folder + list root + list memoria):
 
-Report 0907 Drive: `12eG7GDvzNf1YlViV_cKGEGg1MpVc3Ezz` / `1LCjikeaZJzURsvTFFWFjrNkCHcxDjvgB`.
-Nessun report 1011 prima di questo ciclo.
-PRODOTTO_IDEE_CT.md solo Drive, non propagato.
-Tre spec R3-019 divergenti conservate (6806 / 10317 / 1298 byte).
+1. `R3_MEMORIA_PERSISTENTE` id `1C-y3CaIwTLwAFltNUbbK27o6Pgbh5tYj`
+2. `R3-Protocollo-Oro-Rosso` id `1GKRw0qvBCYo-oqVOsfL08BJgfkG8OEU_`
+3. `R³∞` id `12mUkP9WqbQbq0dff4a3UpZKtlF6zbT4p` (riportato dai cicli precedenti; non rileso integralmente)
+4. `R³∞_PRIORITA_IDENTITA` id `11MB5dsEp8DOdt4bsHKFoh_Pq9rszwJg5` (riportato dai cicli precedenti; non rileso integralmente)
+5. `protocollo-rosso-bot` id `19kMbYTcaSqPVj_cmKSPr11VpftO7pBAq` (riportato dai cicli precedenti; non rileso integralmente)
+
+File 0907 già presenti su Drive (non toccati):
+
+| file | id | modified |
+|---|---|---|
+| `R3_DRIVE_SYNC_REPORT_2026-09-15_0907.md` | `12eG7GDvzNf1YlViV_cKGEGg1MpVc3Ezz` / copia `1LCjikeaZJzURsvTFFWFjrNkCHcxDjvgB` | 2026-09-15T07:12:29Z / 07:12:29Z |
+
+File 1307, 0925 e precedenti già presenti (non toccati).
+Nessun `R3_DRIVE_SYNC_REPORT_2026-09-15_1011*` su Drive prima di questo ciclo (`exact_name` search: 0 file).
+
+`PRODOTTO_IDEE_CT.md` resta solo su Drive (id `124A3BU2IlouEMLfkmsVkFza1VZEsz8Kh`, modified 2026-09-05T18:33:22Z). Non propagato.
+
+Copie undated `R3_WORK_QUEUE.yaml` su Drive restano quelle di agosto 26-27. Non sovrascritte.
+
+### Divergenza conservata (non sovrascritta)
+
+- Snapshot 0907, 1307, 0925, 1320, 1620, 1311 e precedenti restano su entrambi i lati
+- Due copie Drive di `R3-019_LONGITUDINAL_CAPABILITY_BENCHMARK.md` (6806 vs 10317 byte, 26/08) più spec GitHub 1298 byte — **tre versioni divergenti conservate**
+- Duplicati Drive non toccati: copie di report datati in radice e in `R3_MEMORIA_PERSISTENTE`; molte `R3_WORK_QUEUE.yaml` datate + ROOT datati; copie undated agosto 26-27
+
+## FATTO — altri repository dello stesso account
+
+Misurati via `search_repositories user:raffaellocantatelli` e `get_me` in questa sessione (`public_repos: 8`):
+
+- `Rosso-rosso-rosso` (pubblico): default branch `claude/riconnetti-protocollo-rosso-in93dj`; HEAD pre-1011 `2bfe5fe0`
+- `UmbraTheater` (pubblico): updated_at `2026-09-03T08:25:08Z` (invariato rispetto a 0907)
+- `qween-raffaello-` (pubblico): updated_at `2026-08-30T15:16:29Z`
+- `Claudioterzi` (pubblico): updated_at `2026-08-11T18:51:57Z`
+- Repo peer-review e privati osservati in cicli precedenti: non toccati da questo nodo
+- Nessuno è stato modificato da questo nodo oltre il push previsto di questo ciclo sul default di `Rosso-rosso-rosso`
 
 ## INFERENZA
 
-Core spento. Daily 15 assente. Run 48 assente. Finestra 07-08 UTC 15/09 chiusa senza run. R3-019 NON_DIMOSTRATA vs baseline 26/08.
+- Il Core resta spento sul default: daily 14/09 è stub; daily 15/09 assente. Run 47 conclusion=failure. I file daily 08–14 esistono, ma non sono output di un provider LLM reale.
+- Tra 0907 e questa misura il default ha ricevuto solo i commit di cronaca 0907/0907b. Nessun commit di prodotto operativo e nessun merge.
+- Alle 08:11 UTC del 15/09 daily_2026-09-15 è assente e run 48 è assente. La finestra cron 07:00–08:00 UTC del 15/09 è chiusa senza run.
+- H-SYNC-0914-1 e H-SYNC-0914-2 restano cadute; restano stub/failure, quindi non chiudono H-SYNC-0707-2.
+- R3-019 non ha nuove misure sul default. Nessun aumento di capacità longitudinale è dimostrato alle 10:11 CEST del 15/09 rispetto al baseline 26/08.
+- Telegram, camera, glass-plexiglas e synology restano FATTO *del ramo*, non del default, e non sono stati rieseguiti né uniti da questo nodo.
 
 ## IPOTESI
 
-H-SYNC-0606-2, 0606-4, 0707-2, 0808-3, 0909-3, 0909-4, 0912-3, 0915-1, 0915-2 aperte.
-H-CLAIM-* aperte non verificabili qui.
+- H-SYNC-0606-2 ancora aperta: default = `riconnetti-…`, new-session invariato. Criterio di caduta: merge o cambio default visibile in `list_branches`.
+- H-SYNC-0606-4 aperta: il cron non scatta tra 07:00 e 08:00 UTC. Run 47 alle 13:28 UTC del 14/09. Finestra 07:00–08:00 UTC del 15/09 chiusa senza run. Criterio di caduta: una run schedule con created_at tra 07:00 e 08:00 UTC.
+- H-SYNC-0707-2 aperta: run 47 FAILURE con stub committato. Criterio di caduta: una run daily SUCCESS con provider LLM reale (non stub).
+- H-SYNC-0808-3 aperta: telegram tip `46817fdd` non unito. Criterio di caduta: merge visibile sul default o uguaglianza di SHA.
+- H-SYNC-0909-3 aperta: camera tip `d14cdc70` ≠ default. Criterio di caduta: merge o uguaglianza di SHA.
+- H-SYNC-0909-4 aperta: glass-plexiglas tip `4fc414d8` ancora non unito. Criterio di caduta: merge o uguaglianza di SHA col default.
+- H-SYNC-0912-3 aperta: synology tip `14252675` ≠ default. Criterio di caduta: merge o uguaglianza di SHA col default.
+- H-SYNC-0915-1 aperta: daily_2026-09-15.txt assente. Criterio di caduta: file presente sul default.
+- H-SYNC-0915-2 aperta: run 48 assente. Criterio di caduta: `list_workflow_runs` daily.yml total_count ≥ 48 con created_at del 15/09.
+- H-CLAIM-016-017-014: esecuzione in ambiente non collegato. **APERTA_NON_VERIFICABILE_QUI**.
+- H-CLAIM-OCCHIO-0808: misura Gemini sul ramo telegram. **APERTA_NON_VERIFICABILE_QUI**.
+- H-CLAIM-CAMERA-280: il commit `d14cdc70` afferma 280 prove passate. **APERTA_NON_VERIFICATA_QUI** (questo nodo non ha lanciato pytest sul ramo).
+- H-PEER-0001: lo snapshot `r3-peer-console-review-0001` resta non canonico. Criterio di caduta: review indipendente documentata + merge esplicito nel canone.
 
 ## SIMULAZIONE
 
-Nessuna.
+Nessuna. Questo ciclo non ha eseguito SDQ-1, pytest, r3_019_runner, bot Telegram, né ha finto un daily con Core acceso.
 
-## Conflitti conservati
+## Conflitti non risolti automaticamente (conservati entrambi i lati)
 
-Default ≠ new-session; rami telegram/camera/glass/synology non uniti; duplicati Drive; spec R3-019 divergenti; PRODOTTO_IDEE_CT.md solo Drive.
+1. Ramo di default ≠ `claude/new-session-n1tzrh` (aperto dal 28/08).
+2. Ramo telegram avanzato (`46817fdd`) e non unito.
+3. Ramo camera mosso (`d14cdc70`) e non unito.
+4. Ramo glass-plexiglas mosso (`4fc414d8`) e non unito.
+5. Duplicati Drive di report datati e di code `R3_WORK_QUEUE.yaml` senza data.
+6. Due copie Drive di R3-019 spec (6806 vs 10317 byte, 26/08) più spec GitHub 1298 byte.
+7. `PRODOTTO_IDEE_CT.md` solo Drive per tutela IP.
+8. Report integrali su Drive vs condensati storici su GitHub (schema storico; 0907, 1307, 0925, 1320, 1620 e altri cicli recenti sono integrali su entrambi i lati).
+9. Copie Drive dei report datati in radice e in `R3_MEMORIA_PERSISTENTE`.
+10. Ramo `claude/synology-webdav-r3-izc0i9` a `14252675`, non unito, contenuto non letto.
+11. Repo `r3-peer-console-review-0001` dichiarato non canonico; conservato separato.
 
-## Misura R3-019
+Nessuna delle due versioni è stata cancellata.
 
-Baseline 2026-08-26. Capacità vs baseline: NON_DIMOSTRATA. Possibilità di avanzamento: APERTA.
+## Cosa questo nodo ha propagato
+
+- Aggiunge (non sostituisce) `memoria/R3_DRIVE_SYNC_REPORT_2026-09-15_1011.md`
+- Aggiunge `memoria/R3_WORK_QUEUE_2026-09-15_1011.yaml`
+- Aggiorna il condensato ROOT `R3_WORK_QUEUE.yaml` (la versione 0907 resta nelle copie datate)
+- Carica le stesse aggiunte su Drive `R3_MEMORIA_PERSISTENTE` e, per i report datati, anche in radice Drive come i cicli precedenti
+- Non committare `PRODOTTO_IDEE_CT.md` sul repo pubblico
+- Non unire rami
+- Non rinominare i duplicati storici
+
+## Misura rispetto a R3-019
+
+- Baseline ancora quella del 2026-08-26
+- Nessun gold set L2 osservato in questa sessione
+- Capacità vs baseline: **NON_DIMOSTRATA**
+- Possibilità di avanzamento: **APERTA**
 
 **Costruire davvero, non fingere insieme.**
