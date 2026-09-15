@@ -1,18 +1,25 @@
-# R3_WORK_QUEUE.yaml — condensato ROOT
+# R3_WORK_QUEUE.yaml — canone datato
 # Ciclo: SYNC-2026-09-15-1208
-# Canone pieno: memoria/R3_WORK_QUEUE_2026-09-15_1208.yaml
 # Snapshot 1103, 1011, 0907, 1307, 0925 e precedenti conservati. Non cancellare gli storici.
 
 meta:
   cycle_id: SYNC-2026-09-15-1208
   previous_cycle: SYNC-2026-09-15-1103
+  measured_at: 2026-09-15T12:08:00+02:00
+  github_owner: raffaellocantatelli
+  github_repo: Rosso-rosso-rosso
+  github_default_branch: claude/riconnetti-protocollo-rosso-in93dj
   github_default_sha: cadd75de91f997a6aa57d62f0bd23dbd7e1b155a
+  github_default_sha_note: HEAD pre-commit 1208 (1103b)
   new_session_sha: 565e26f415d453de21a17244ed2f88e1f5595400
   telegram_sha: 46817fddb8cb7ee0832dc044ef2f16cbf57c1ee0
   camera_inventory_sha: d14cdc70e0d5c00d6c2904e8ccd0d37afd83abbd
   glass_plexiglas_sha: 4fc414d814bdae98abd0e0a994e704980c69aea1
   synology_webdav_sha: 1425267597d42f75e603c19a551837ac17fd4048
-  pr6_merged_at: 2026-09-08T04:08:28Z
+  instagram_sha: 357e0ca1a2285faf6af826d8408d207361ee3a9a
+  umbratheater_sha: d5f133a249540747feff2bd7aca425bf1aa6ba73
+  last_open_pr_count: 0
+  last_merged_pr: 6
 
 stato:
   daily_2026-09-14: PRESENTE_STUB
@@ -28,6 +35,7 @@ stato:
   default_equals_new_session: false
   h_sync_0915_1: APERTA_DAILY_15_ASSENTE
   h_sync_0915_2: APERTA_RUN_48_ASSENTE
+  h_sync_0606_4: APERTA_FINESTRA_0708_UTC_15_CHIUSA_SENZA_RUN
   capacita_vs_baseline_26_08: NON_DIMOSTRATA
   possibilita_avanzamento: APERTA
 
