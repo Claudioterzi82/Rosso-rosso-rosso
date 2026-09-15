@@ -1,18 +1,29 @@
-# R3_WORK_QUEUE.yaml — condensato ROOT
+# R3_WORK_QUEUE.yaml — canone datato
 # Ciclo: SYNC-2026-09-15-1815
-# Canone pieno: memoria/R3_WORK_QUEUE_2026-09-15_1815.yaml
 # Snapshot 1711, 1622, 1506, 1405, 1312, 1208, 1103, 1011, 0907 e precedenti conservati. Non cancellare gli storici.
 
 meta:
   cycle_id: SYNC-2026-09-15-1815
   previous_cycle: SYNC-2026-09-15-1711
+  measured_at: 2026-09-15T18:15:00+02:00
+  github_owner: raffaellocantatelli
+  github_repo: Rosso-rosso-rosso
+  github_default_branch: claude/riconnetti-protocollo-rosso-in93dj
   github_default_sha: 0c89d42c5f8ad4b899ff3401757c00370d7af9e0
+  github_default_sha_note: HEAD pre-commit 1815 (SYNC-1711)
   new_session_sha: 565e26f415d453de21a17244ed2f88e1f5595400
   telegram_sha: 46817fddb8cb7ee0832dc044ef2f16cbf57c1ee0
   camera_inventory_sha: d14cdc70e0d5c00d6c2904e8ccd0d37afd83abbd
   glass_plexiglas_sha: 4fc414d814bdae98abd0e0a994e704980c69aea1
   synology_webdav_sha: 1425267597d42f75e603c19a551837ac17fd4048
-  pr6_merged_at: 2026-09-08T04:08:28Z
+  instagram_sha: 357e0ca1a2285faf6af826d8408d207361ee3a9a
+  umbratheater_sha: d5f133a249540747feff2bd7aca425bf1aa6ba73
+  last_open_pr_count: 0
+  last_merged_pr: 6
+  sdq1_run_48_id: 34968251797
+  sdq1_run_48_created_at: 2026-09-15T12:20:11Z
+  drive_1622_report_exact_name: ASSENTE_PRE_UPLOAD
+  drive_1711_report_exact_name: ASSENTE_PRE_UPLOAD
 
 stato:
   daily_2026-09-14: PRESENTE_STUB
@@ -26,10 +37,11 @@ stato:
   glass_plexiglas_branch: INVARIATO_NON_UNITO_4fc414d8
   synology_webdav_branch: INVARIATO_NON_UNITO_14252675
   default_equals_new_session: false
-  drive_1622_report: ASSENTE_PRE_UPLOAD
-  drive_1711_report: ASSENTE_PRE_UPLOAD
   h_sync_0915_1: CADUTA_DAILY_15_PRESENTE_STUB
   h_sync_0915_2: CADUTA_RUN_48_PRESENTE_FAILURE
+  h_sync_0606_4: APERTA_FINESTRA_0708_UTC_15_CHIUSA_SENZA_RUN
+  h_sync_0707_2: APERTA_RUN_48_FAILURE_CORE_SPENTO
+  h_sync_1711_1: APERTA_PRE_UPLOAD_REPORT_1622_1711_ASSENTI_DRIVE
   capacita_vs_baseline_26_08: NON_DIMOSTRATA
   possibilita_avanzamento: APERTA
 
