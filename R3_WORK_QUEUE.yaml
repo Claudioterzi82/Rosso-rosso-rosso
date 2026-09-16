@@ -1,22 +1,22 @@
 # R3_WORK_QUEUE.yaml — condensato ROOT
-# Ciclo: SYNC-2026-09-15-1819
-# Canone pieno: memoria/R3_WORK_QUEUE_2026-09-15_1819.yaml
-# Snapshot 1815, 1711, 1622, 1506, 1405, 1312, 1208, 1103, 1011, 0907 e precedenti conservati. Non cancellare gli storici.
+# Ciclo: SYNC-2026-09-16-0615
+# Canone pieno: memoria/R3_WORK_QUEUE_2026-09-16_0615.yaml
+# Snapshot 1819, 1815, 1711, 1622, 1506, 1405 e precedenti conservati. Non cancellare gli storici.
 
 meta:
-  cycle_id: SYNC-2026-09-15-1819
-  previous_cycle: SYNC-2026-09-15-1815
-  github_default_sha: 789b5060e2059d74d522e694f7ade9e95153dd32
+  cycle_id: SYNC-2026-09-16-0615
+  previous_cycle: SYNC-2026-09-15-1819
+  github_default_sha: 84b98e108f9037a329d45420014eefb71139c4d4
   new_session_sha: 565e26f415d453de21a17244ed2f88e1f5595400
   telegram_sha: 46817fddb8cb7ee0832dc044ef2f16cbf57c1ee0
   camera_inventory_sha: d14cdc70e0d5c00d6c2904e8ccd0d37afd83abbd
   glass_plexiglas_sha: 4fc414d814bdae98abd0e0a994e704980c69aea1
-  synology_webdav_sha: 1425267597d42f75e603c19a551837ac17fd4048
+  synology_webdav_sha: 4a754af73e9d307ac7fb43e5ccaa0ea553c9b525
   pr6_merged_at: 2026-09-08T04:08:28Z
 
 stato:
-  daily_2026-09-14: PRESENTE_STUB
   daily_2026-09-15: PRESENTE_STUB
+  daily_2026-09-16: ASSENTE
   r3_019: BASELINE_0_NO_NEW_RUN
   sdq1_run_47: PRESENTE_34849426812_FAILURE
   sdq1_run_48: PRESENTE_34968251797_FAILURE
@@ -24,14 +24,11 @@ stato:
   telegram_branch: INVARIATO_NON_UNITO_46817fdd
   camera_branch: INVARIATO_NON_UNITO_d14cdc70
   glass_plexiglas_branch: INVARIATO_NON_UNITO_4fc414d8
-  synology_webdav_branch: INVARIATO_NON_UNITO_14252675
+  synology_webdav_branch: MOSSO_NON_UNITO_4a754af7
   default_equals_new_session: false
-  drive_1622_report: PRESENTE
-  drive_1711_report: PRESENTE
-  drive_1815_report: PRESENTE
-  h_sync_0915_1: CADUTA_DAILY_15_PRESENTE_STUB
-  h_sync_0915_2: CADUTA_RUN_48_PRESENTE_FAILURE
-  h_sync_1711_1: CADUTA_REPORT_1622_1711_PRESENTI_DRIVE
+  drive_1819_report: PRESENTE
+  h_sync_0916_1: APERTA_DAILY_16_ASSENTE
+  h_sync_0916_2: APERTA_RUN_49_ASSENTE
   capacita_vs_baseline_26_08: NON_DIMOSTRATA
   possibilita_avanzamento: APERTA
 
