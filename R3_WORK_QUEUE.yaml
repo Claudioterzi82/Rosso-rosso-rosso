@@ -1,34 +1,39 @@
 # R3_WORK_QUEUE.yaml — condensato ROOT
-# Ciclo: SYNC-2026-09-16-0615
-# Canone pieno: memoria/R3_WORK_QUEUE_2026-09-16_0615.yaml
-# Snapshot 1819, 1815, 1711, 1622, 1506, 1405 e precedenti conservati. Non cancellare gli storici.
+# Ciclo: SYNC-2026-09-19-0632
+# Canone pieno: memoria/R3_WORK_QUEUE_2026-09-19_0632.yaml
+# Snapshot 0615, 1819, 1815 e precedenti conservati. Non cancellare gli storici.
 
 meta:
-  cycle_id: SYNC-2026-09-16-0615
-  previous_cycle: SYNC-2026-09-15-1819
-  github_default_sha: 84b98e108f9037a329d45420014eefb71139c4d4
+  cycle_id: SYNC-2026-09-19-0632
+  previous_cycle: SYNC-2026-09-16-0615
+  github_default_sha: 97352017e50666bfd2d51e2dedfe84f90a5cbe93
   new_session_sha: 565e26f415d453de21a17244ed2f88e1f5595400
-  telegram_sha: 46817fddb8cb7ee0832dc044ef2f16cbf57c1ee0
+  telegram_sha: de3dc4c71d11847224b0a76f4c7b0a4def6c63de
   camera_inventory_sha: d14cdc70e0d5c00d6c2904e8ccd0d37afd83abbd
   glass_plexiglas_sha: 4fc414d814bdae98abd0e0a994e704980c69aea1
   synology_webdav_sha: 4a754af73e9d307ac7fb43e5ccaa0ea553c9b525
+  pr7_head_sha: 57e06e3dc90b81aae73af2ba54f3943237a4dbef
   pr6_merged_at: 2026-09-08T04:08:28Z
 
 stato:
-  daily_2026-09-15: PRESENTE_STUB
-  daily_2026-09-16: ASSENTE
+  daily_2026-09-16: PRESENTE_STUB
+  daily_2026-09-17: PRESENTE_STUB
+  daily_2026-09-18: PRESENTE_STUB
+  daily_2026-09-19: ASSENTE
   r3_019: BASELINE_0_NO_NEW_RUN
-  sdq1_run_47: PRESENTE_34849426812_FAILURE
-  sdq1_run_48: PRESENTE_34968251797_FAILURE
-  sdq1_daily_total_count: 48
-  telegram_branch: INVARIATO_NON_UNITO_46817fdd
+  sdq1_run_49: PRESENTE_35094954767_FAILURE
+  sdq1_run_50: PRESENTE_35220292132_FAILURE
+  sdq1_run_51: PRESENTE_35342216997_FAILURE
+  sdq1_daily_total_count: 51
+  telegram_branch: MOSSO_NON_UNITO_de3dc4c7
   camera_branch: INVARIATO_NON_UNITO_d14cdc70
   glass_plexiglas_branch: INVARIATO_NON_UNITO_4fc414d8
-  synology_webdav_branch: MOSSO_NON_UNITO_4a754af7
+  synology_webdav_branch: INVARIATO_NON_UNITO_4a754af7
+  pr7: APERTA_NON_UNITA
   default_equals_new_session: false
-  drive_1819_report: PRESENTE
-  h_sync_0916_1: APERTA_DAILY_16_ASSENTE
-  h_sync_0916_2: APERTA_RUN_49_ASSENTE
+  drive_source_after_0615: NESSUNO
+  h_sync_0916_1: CADUTA_DAILY_16_PRESENTE_STUB
+  h_sync_0916_2: CADUTA_RUN_49_PRESENTE_FAILURE
   capacita_vs_baseline_26_08: NON_DIMOSTRATA
   possibilita_avanzamento: APERTA
 

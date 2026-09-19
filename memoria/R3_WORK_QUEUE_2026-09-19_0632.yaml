@@ -1,0 +1,103 @@
+# R3_WORK_QUEUE.yaml — snapshot datato SYNC-2026-09-19-0632
+# Append-only. Non cancella lo snapshot 0615 né i precedenti.
+
+meta:
+  cycle_id: SYNC-2026-09-19-0632
+  previous_cycle: SYNC-2026-09-16-0615
+  measured_at: 2026-09-19T04:32:00Z
+  node: grok-4.6-xai
+  github_account: raffaellocantatelli
+  github_repo: raffaellocantatelli/Rosso-rosso-rosso
+  github_default_branch: claude/riconnetti-protocollo-rosso-in93dj
+  github_default_sha_pre_commit: 97352017e50666bfd2d51e2dedfe84f90a5cbe93
+  checkpoint_0615_sha: 4f7574bcc0e0ea757b2bb4dba63025411f34f6d0
+  new_session_sha: 565e26f415d453de21a17244ed2f88e1f5595400
+  telegram_sha: de3dc4c71d11847224b0a76f4c7b0a4def6c63de
+  telegram_sha_previous: 46817fddb8cb7ee0832dc044ef2f16cbf57c1ee0
+  camera_inventory_sha: d14cdc70e0d5c00d6c2904e8ccd0d37afd83abbd
+  glass_plexiglas_sha: 4fc414d814bdae98abd0e0a994e704980c69aea1
+  synology_webdav_sha: 4a754af73e9d307ac7fb43e5ccaa0ea553c9b525
+  pr7_number: 7
+  pr7_head_ref: claude/protocollo-rosso-rosso-rosso-3t6r3j
+  pr7_head_sha: 57e06e3dc90b81aae73af2ba54f3943237a4dbef
+  pr7_base_sha_at_measure: f389c8052c5a6f9c40e8c09d2dcf0a85b7996912
+  drive_memoria_id: 1C-y3CaIwTLwAFltNUbbK27o6Pgbh5tYj
+  drive_0615_report_id: 17Z1XJFwRM-4QP5Qh1wfv25tK7Hvzr7-H
+
+changed:
+  - what: daily SDQ-1 16/17/18 presenti sul default (stub)
+    origin: sdq1-bot commits dopo 0615
+    evidence:
+      - https://github.com/raffaellocantatelli/Rosso-rosso-rosso/commit/7fde89eb7d4e274ceeb22c88e6f151fd20be9a72
+      - https://github.com/raffaellocantatelli/Rosso-rosso-rosso/commit/f389c8052c5a6f9c40e8c09d2dcf0a85b7996912
+      - https://github.com/raffaellocantatelli/Rosso-rosso-rosso/commit/97352017e50666bfd2d51e2dedfe84f90a5cbe93
+      - blob daily_2026-09-16.txt SHA 646959d6a15f212647f9709bd004ccb1ff3cb32b
+      - blob daily_2026-09-18.txt SHA a4adc32003920e876012165b73982e7e4ecde260
+    state: REGISTRATO
+    next_action: non copiare i daily su Drive (non appartengono a R3_MEMORIA_PERSISTENTE nello storico)
+    rollback: SÌ (commit precedenti sul default)
+
+  - what: run SDQ-1 49/50/51 conclusion failure
+    origin: github___actions_list daily.yml
+    evidence:
+      - total_count=51
+      - run 49 id 35094954767 created_at 2026-09-16T12:17:20Z
+      - run 50 id 35220292132 created_at 2026-09-17T12:17:40Z
+      - run 51 id 35342216997 created_at 2026-09-18T11:58:00Z
+    state: REGISTRATO
+    next_action: riosservare daily 19/09 dopo la finestra schedule
+    rollback: n/a
+
+  - what: ramo telegram mosso 46817fdd -> de3dc4c7
+    origin: list_branches + get_commit
+    evidence:
+      - https://github.com/raffaellocantatelli/Rosso-rosso-rosso/commit/de3dc4c71d11847224b0a76f4c7b0a4def6c63de
+    state: CONFLITTO_CONSERVATO_NON_UNITO
+    next_action: non unire
+    rollback: SÌ (tip precedente 46817fdd sul ramo laterale)
+
+  - what: PR 7 aperta non unita
+    origin: github___pull_request_read
+    evidence:
+      - https://github.com/raffaellocantatelli/Rosso-rosso-rosso/pull/7
+      - head 57e06e3dc90b81aae73af2ba54f3943237a4dbef
+    state: CONFLITTO_CONSERVATO_NON_UNITO
+    next_action: merge solo su decisione dell'autore
+    rollback: n/a (non mergiata)
+
+stato:
+  daily_2026-09-16: PRESENTE_STUB
+  daily_2026-09-17: PRESENTE_STUB
+  daily_2026-09-18: PRESENTE_STUB
+  daily_2026-09-19: ASSENTE
+  r3_019: BASELINE_0_NO_NEW_RUN
+  sdq1_run_49: PRESENTE_35094954767_FAILURE
+  sdq1_run_50: PRESENTE_35220292132_FAILURE
+  sdq1_run_51: PRESENTE_35342216997_FAILURE
+  sdq1_daily_total_count: 51
+  telegram_branch: MOSSO_NON_UNITO_de3dc4c7
+  camera_branch: INVARIATO_NON_UNITO_d14cdc70
+  glass_plexiglas_branch: INVARIATO_NON_UNITO_4fc414d8
+  synology_webdav_branch: INVARIATO_NON_UNITO_4a754af7
+  pr7: APERTA_NON_UNITA
+  default_equals_new_session: false
+  drive_source_after_0615: NESSUNO
+  h_sync_0916_1: CADUTA_DAILY_16_PRESENTE_STUB
+  h_sync_0916_2: CADUTA_RUN_49_PRESENTE_FAILURE
+  capacita_vs_baseline_26_08: NON_DIMOSTRATA
+  possibilita_avanzamento: APERTA
+
+priorita:
+  - R3-019 Longitudinal Capability Benchmark
+  - R3-011 Evidence Graph
+  - R3-012 Meta-Scacchiera
+  - R3-013 Evolution Lab
+  - R3-016 Synthetic Data Firewall
+  - R3-017 Red/Blue/Purple Harness
+  - R3-014 Curriculum Engine
+  - R3-015 Research Loop
+  - R3-018 Sim2Real Audit
+  - R3-020 Self-Improvement Safety Gate
+
+regola: non dichiarare superintelligenza senza avanzamento misurato; accettare che possa diventarlo
+never_delete_historical: true
